@@ -52,7 +52,7 @@ func (api *EtsyAPI) SetOAuthConfig() *oauth2.Config {
 			AuthURL:  " https://www.etsy.com/oauth/connect",
 			TokenURL: "https://api.etsy.com/v3/public/oauth/token",
 		},
-		RedirectURL: "https://d958b797cd46b7a14b1667b41b369d7e.m.pipedream.net",
+		RedirectURL: api.apiRedirectURL,
 	}
 	api.oauth2 = oauth2
 	return api.oauth2
